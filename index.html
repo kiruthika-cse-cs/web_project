@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ThinkFast Quiz</title>
+  <link rel="icon" href="logo.png" type="image/png" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header id="header">
+    <img src="logo.png" alt="ThinkFast Logo" />
+    <h1>ThinkFast Quiz</h1>
+    <button id="modeToggle" aria-label="Toggle Dark/Light Mode">Dark Mode</button>
+  </header>
+
+
+   <div class="bg-slideshow">
+  <img src="bg1.jpg" alt="bg1">
+  <img src="bg2.jpg" alt="bg2">
+  <img src="bg3.jpg" alt="bg3">
+  <img src="bg4.jpg" alt="bg4">
+</div>
+
+  <main>
+    <section id="categorySelect">
+      <label for="category">Choose Category:</label>
+      <select id="category" aria-label="Select quiz category">
+        <option value="general">General Knowledge</option>
+        <option value="science">Science & Tech</option>
+      </select>
+      <button id="startBtn">Start Quiz</button>
+    </section>
+    
+
+    <section id="quizBox" aria-live="polite" aria-atomic="true">
+      <div id="timer" aria-live="assertive" aria-atomic="true">Time: 15s</div>
+      <div id="progressBarContainer" aria-hidden="true">
+        <div id="progressBar"></div>
+      </div>
+      <div id="question"></div>
+      <ul id="answers"></ul>
+    </section>
+ 
+</section>
+
+    <section id="scoreSummary" aria-live="polite" aria-atomic="true">
+      <p id="finalScore"></p>
+      <p id="performanceMsg"></p>
+      <button id="restartBtn">Restart Quiz</button>
+    </section>
+  </main>
+
+  <!-- Sound effects -->
+  <audio id="soundCorrect" src="https://actions.google.com/sounds/v1/cartoon/clang_and_wobble.ogg" preload="auto"></audio>
+  <audio id="soundWrong" src="https://actions.google.com/sounds/v1/cartoon/cartoon_boing.ogg" preload="auto"></audio>
+  <audio id="soundTimer" src="https://actions.google.com/sounds/v1/alarms/beep_short.ogg" preload="auto"></audio>
+
+
+  <footer class="footer">
+    <a href="home.html">Home  ||</a>
+    <a href="about.html">About Us  ||</a>
+    <a href="contact.html">Contact</a>
+    <p>&copy; 2025 ThinkFast. All rights reserved. </p>
+</footer>
+
+
+
+
+  <script src="script.js"></script>
+</body>
+</html>
